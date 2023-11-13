@@ -21,15 +21,41 @@
 
 ## Installation
 
-1. Clone the repository to your local machine:
+### Maven
 
-```bash
-git clone https://github.com/kamal-commits/common-utils.git
+To install the common-utils library using Maven, add the following dependency to your `pom.xml` file:
+
+```xml
+<dependency>
+    <groupId>com.kamalsha.helper</groupId>
+    <artifactId>common-utils</artifactId>
+    <version>1.0.0</version>
+</dependency>
 ```
 
-2. Open the project in your favorite Java IDE.
+Then, run the following command to update your project's dependencies:
 
-3. Ensure that the required dependencies are properly configured.
+```bash
+mvn clean install
+```
+
+### Gradle
+
+To install the common-utils library using Gradle, add the following dependency to your build.gradle file:
+
+```groovy
+dependencies {
+    implementation 'com.kamalsha.helper:common-utils:1.0.0'
+}
+```
+
+Then, run the following command to update your project's dependencies:
+
+```bash
+./gradlew build
+```
+
+Please replace `1.0.0` with the actual version of your library.
 
 ## Usage
 
@@ -37,7 +63,8 @@ The `HelperService` class provides various utility methods that can be used in y
 
 ```java
 // Example usage
-HelperService helperService = new HelperService();
+@Autowired
+private HelperService helperService;
 
 // Convert a string to a double
 double convertedValue = helperService.toDouble("123.45");
