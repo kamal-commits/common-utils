@@ -1,37 +1,124 @@
-# Daily Life Helper Function
+# HelperService Readme
 
-This Spring Boot project provides a common  helper function that can be used to perform various tasks such as date formatting, string conversion, and more. The `Helper` class in this project encapsulates these functionalities.
+`HelperService` is a utility service providing various helper methods for common tasks. It includes functionalities for converting data types, formatting dates, checking data types, and more. The service is implemented in Java and utilizes popular libraries like Spring and Jackson.
 
 ## Table of Contents
 
-- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
 - [Usage](#usage)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Examples](#examples)
-- [Testing](#testing)
+- [Methods](#methods)
+- [Example](#example)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Features
+## Prerequisites
 
-The helper function provides the following features:
+- Java Development Kit (JDK)
+- Spring Framework (for `@Service` annotation)
+- Jackson Library (for JSON processing)
+- Log4j2 (for logging)
 
-- String to double conversion
-- String to integer conversion
-- Object to HashMap conversion
-- Date formatting
-- Month number retrieval
-- Start and end date of the month calculation
-- Current month retrieval
-- Start and end date from financial year calculation
-- Type checking (string, numeric, date)
+## Installation
+
+1. Clone the repository to your local machine:
+
+```bash
+git clone <repository-url>
+```
+
+2. Open the project in your favorite Java IDE.
+
+3. Ensure that the required dependencies are properly configured.
 
 ## Usage
 
-To use the helper function in your Spring Boot project, follow these steps:
+The `HelperService` class provides various utility methods that can be used in your Java project. To use the service, instantiate an object of `HelperService` and call the desired methods.
 
-1. Include the helper function in your project.
-2. Autowire the `Helper` bean in your service or controller.
-3. Utilize the various helper methods based on your requirements.
+```java
+// Example usage
+HelperService helperService = new HelperService();
+
+// Convert a string to a double
+double convertedValue = helperService.toDouble("123.45");
+
+// Format a date string
+String formattedDate = helperService.toDate("01/23/2023");
+
+// Check if a value is numeric
+boolean isNumeric = helperService.isNumeric(42);
+
+```
+
+## Methods
+
+### `toDouble(String str)`
+
+Converts a string to a double value. If the string cannot be converted, it returns 0.
+
+### `toDouble(String str, Integer decimalPlaces)`
+
+Converts a string to a double value with a specified number of decimal places.
+
+### `toInt(String value)`
+
+Converts a string to an integer. If the string cannot be converted, it returns 0.
+
+### `toHashMap(Object obj)`
+
+Converts an object to a HashMap containing its fields and their values.
+
+### `toDate(String date)`
+
+Formats a date string from the "dd/MM/yyyy" format to "yyyy-MM-dd".
+
+### `isString(Object value)`
+
+Checks if the given value is a string.
+
+### `isNumeric(Object value)`
+
+Checks if the given value is numeric.
+
+### `isDate(Object value)`
+
+Checks if the given value is a date.
+
+### `capitalize(String str)`
+
+Capitalizes the first letter of a string.
+
+### `getJsonObject(String jsonString)`
+
+Parses a JSON string and returns a Map object representing the JSON object.
+
+### `getNestedValue(Map<String, Object> map, String... keys)`
+
+Returns the value of the nested key in the given map.
+
+## Example
+
+```java
+// Example usage
+HelperService helperService = new HelperService();
+
+// Convert a string to a double
+double convertedValue = helperService.toDouble("123.45");
+
+// Format a date string
+String formattedDate = helperService.toDate("01/23/2023");
+
+// Check if a value is numeric
+boolean isNumeric = helperService.isNumeric(42);
+
+```
+
+## Contributing
+
+Contributions are welcome! Feel free to submit issues, suggest improvements, or open pull requests.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
