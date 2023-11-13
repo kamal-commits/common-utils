@@ -24,7 +24,7 @@
 1. Clone the repository to your local machine:
 
 ```bash
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/kamal-commits/common-utils.git)
 ```
 
 2. Open the project in your favorite Java IDE.
