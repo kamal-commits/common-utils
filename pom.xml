@@ -13,9 +13,11 @@
   <!-- Project Information -->
   <groupId>com.kamalsha.helper</groupId>
   <artifactId>common-utils</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>common-utils</name>
-  <description>A repo for common utils</description>
+  <description>
+    HelperService is a utility service providing various helper methods for common tasks. It includes functionalities for converting data types, formatting dates, checking data types, and more. The service is implemented in Java and utilizes popular libraries like Spring and Jackson.
+  </description>
   <url>https://github.com/kamal-commits/common-utils</url>
 
   <!-- SCM Information -->
@@ -159,7 +161,7 @@
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.7</version>
+        <version>1.6.13</version>
         <extensions>true</extensions>
         <configuration>
           <serverId>ossrh</serverId>
