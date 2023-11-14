@@ -123,21 +123,6 @@ Parses a JSON string and returns a Map object representing the JSON object.
 
 Returns the value of the nested key in the given map.
 
-## Example
-
-```java
-// Example usage
-HelperService helperService = new HelperService();
-
-// Convert a string to a double
-double convertedValue = helperService.toDouble("123.45");
-
-// Format a date string
-String formattedDate = helperService.toDate("01/23/2023");
-
-// Check if a value is numeric
-boolean isNumeric = helperService.isNumeric(42);
-
 ```
 
 ## Contributing
