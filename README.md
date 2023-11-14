@@ -123,7 +123,6 @@ Parses a JSON string and returns a Map object representing the JSON object.
 
 Returns the value of the nested key in the given map.
 
-```
 
 ## Contributing
 
